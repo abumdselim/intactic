@@ -36,15 +36,15 @@
 ## 🛠️ দ্বিতীয় ধাপ: কোড রিফ্যাক্টরিং ও আর্কিটেকচার উন্নত করা (মাঝারি অগ্রাধিকার - Medium Priority)
 
 ### ২.১ মনোলিথিক পেজ রিফ্যাক্টরিং
-- [ ] `pages/index.js` ফাইলকে মডিউলার করতে প্রতিটি সেকশনকে আলাদা কম্পোনেন্টে ভাগ করা:
-  - [ ] `components/sections/Hero.js`
-  - [ ] `components/sections/Capabilities.js`
-  - [ ] `components/sections/CaseStudies.js`
-  - [ ] `components/sections/Contact.js`
-  - [ ] ইত্যাদি।
+- [x] `pages/index.js` ফাইলকে মডিউলার করতে প্রতিটি সেকশনকে আলাদা কম্পোনেন্টে ভাগ করা হয়েছে:
+  - [x] `components/sections/HeroSection.js`
+  - [x] `components/sections/CapabilitiesSection.js`
+  - [x] `components/sections/CaseStudiesSection.js`
+  - [x] `components/sections/ContactSection.js`
+  - [x] এবং অন্যান্য সকল সেকশন (Industries, Stats, AI, TechStack, Process, Recognitions, Careers)।
 
 ### ২.২ ডাটা ও কনফিগারেশন আলাদা করা
-- [ ] প্রজেক্টের সমস্ত স্ট্যাটিক ডাটা (স্লাইড কন্টেন্ট, কেস স্টাডি লিস্ট, টেক স্ট্যাক লিস্ট ইত্যাদি) পেজ থেকে সরিয়ে আলাদা একটি ডাটা ফাইলে নিয়ে যাওয়া (যেমন: `data/contentData.js`)।
+- [x] প্রজেক্টের সমস্ত স্ট্যাটিক ডাটা (স্লাইড কন্টেন্ট, কেস স্টাডি লিস্ট, টেক স্ট্যাক লিস্ট ইত্যাদি) পেজ থেকে সরিয়ে আলাদা একটি ডাটা ফাইলে নিয়ে যাওয়া হয়েছে (`data/contentData.js`)।
 
 ### ২.৩ সিএসএস ফাইল মডুলারাইজ করা
 - [ ] `styles/globals.css` ফাইলের সাইজ কমাতে এটিকে প্রতিটি কম্পোনেন্টের জন্য আলাদা সিএসএস মডিউলে (CSS Modules) রূপান্তর করা।

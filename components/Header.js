@@ -196,7 +196,7 @@ export default function Header() {
           </nav>
 
           <div className="header-actions">
-            <a href="https://calendly.com/meeting-brainstation-23/30min" target="_blank" rel="noopener noreferrer" className="cta-button">
+            <a href="https://calendly.com/intactic-innovations/30min" target="_blank" rel="noopener noreferrer" className="cta-button">
               <span>Schedule a Call</span>
             </a>
             <button className="mobile-toggle" aria-label="Toggle Navigation Menu" onClick={toggleDrawer}>
@@ -335,7 +335,7 @@ export default function Header() {
           </ul>
 
           <div className="drawer-footer">
-            <a href="https://calendly.com/meeting-brainstation-23/30min" target="_blank" rel="noopener noreferrer" className="drawer-cta">
+            <a href="https://calendly.com/intactic-innovations/30min" target="_blank" rel="noopener noreferrer" className="drawer-cta">
               <span>Schedule a Call</span>
             </a>
           </div>

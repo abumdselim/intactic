@@ -16,10 +16,10 @@ export default function Footer() {
           </a>
 
           <div className="footer-socials">
-            <a href="https://www.facebook.com/brainstation23/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-            <a href="https://twitter.com/BrainStation23" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i className="fa-brands fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/brainstation-23" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/channel/UCQ5AqU2eGEzvxiG8GUFF6Cw" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/intactic" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/intactic" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i className="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/intactic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@intactic" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
           </div>
         </div>
 
@@ -39,11 +39,9 @@ export default function Footer() {
           <h4>Products</h4>
           <ul>
             <li><a href="#products">Proctoring Pro</a></li>
-            <li><a href="#products">Wallet23</a></li>
-            <li><a href="#products">Remity</a></li>
-            <li><a href="#products">PocketEdge</a></li>
             <li><a href="#products">Omnizia</a></li>
-
+            <li><a href="#products">Time2Publish</a></li>
+            <li><a href="#products">NeuraFlow</a></li>
           </ul>
         </div>
 
@@ -53,7 +51,7 @@ export default function Footer() {
             <li><a href="#contact">About Us</a></li>
             <li><a href="#contact">Blog Insights</a></li>
             <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="https://brainstation-23.easy.jobs/" target="_blank" rel="noopener noreferrer">Careers</a></li>
+            <li><a href="#careers">Careers</a></li>
             <li><a href="#contact">Contact Inquiry</a></li>
           </ul>
         </div>

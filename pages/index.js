@@ -140,38 +140,38 @@ export default function Home() {
       badge: 'AI & ML, LMS',
       color: '#4992C1',
       title: 'Streamlining Attendance at IIITK with Facial Recognition',
-      desc: 'The Indian Institute of Information Technology, Kottayam (IIITK) is an autonomous engineering institute located in Valavoor, Palai, Kottayam District, Kerala, India. Brain Station 23 developed a high-accuracy, scalable facial recognition attendance system to streamline student operations and reduce processing times.',
-      link: '/iiitk/',
+      desc: 'The Indian Institute of Information Technology, Kottayam (IIITK) is an autonomous engineering institute located in Valavoor, Palai, Kottayam District, Kerala, India. Intactic Innovations developed a high-accuracy, scalable facial recognition attendance system to streamline student operations and reduce processing times.',
+      link: '#contact',
       stats: [
         { num: '80%', lbl: 'Processing Time Reduced' },
         { num: '99.5%', lbl: 'Facial Recognition Accuracy' },
       ],
-      img: 'https://brainstation-23.com/wp-content/uploads/2025/06/image-23.png',
+      img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80',
     },
 
     {
       badge: 'AEM Solutions',
       color: '#6C63FF',
       title: 'Transforming Biopharma Engagement: AEM-Powered HCP Portal Boosts Learning & Compliance in Europe',
-      desc: 'Discover how Brain Station 23 built a GDPR-compliant, multi-language HCP portal on Adobe Experience Manager (AEM), streamlining medical content access and LMS integration for a European biopharma leader. The solution enhanced engagement, ensured regulatory compliance, and scaled operations across EU markets.',
-      link: '/european-biopharmaceutical-company/',
+      desc: 'Discover how Intactic Innovations built a GDPR-compliant, multi-language HCP portal on Adobe Experience Manager (AEM), streamlining medical content access and LMS integration for a European biopharma leader. The solution enhanced engagement, ensured regulatory compliance, and scaled operations across EU markets.',
+      link: '#contact',
       stats: [
         { num: '40%', lbl: 'HCP Engagement Rate' },
         { num: '100%', lbl: 'GDPR Compliance Efficiency' },
       ],
-      img: 'https://brainstation-23.com/wp-content/uploads/2025/06/image-23.png',
+      img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
     },
     {
       badge: 'E-Commerce',
       color: '#E63B6F',
       title: 'Shwapno: Driving Retail Transformation through Scalable E-Commerce and Digital Excellence',
-      desc: 'Brain Station 23 partnered with Shwapno, the #1 retail supermarket in Bangladesh, to develop a powerful, microservice-based e-commerce platform tailored for enterprise-scale retail. Built for scalability, speed, and a seamless user experience, the solution has revolutionized online grocery shopping, driving massive growth, boosting operational efficiency, and solidifying Shwapno’s dominance in Bangladesh’s retail landscape.',
-      link: '/empowering-shwapno/',
+      desc: 'Intactic Innovations partnered with Shwapno, the #1 retail supermarket in Bangladesh, to develop a powerful, microservice-based e-commerce platform tailored for enterprise-scale retail. Built for scalability, speed, and a seamless user experience, the solution has revolutionized online grocery shopping, driving massive growth, boosting operational efficiency, and solidifying Shwapno’s dominance in Bangladesh’s retail landscape.',
+      link: '#contact',
       stats: [
         { num: '40%', lbl: 'Surge in Mobile App ratings' },
         { num: '3X', lbl: 'Growth in Daily orders placed' },
       ],
-      img: 'https://brainstation-23.com/wp-content/uploads/2025/06/image-25.png',
+      img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
     },
   ];
 
@@ -621,7 +621,7 @@ export default function Home() {
                           </div>
                         ))}
                       </div>
-                      <a href={`https://brainstation-23.com${c.link}`} target="_blank" rel="noopener noreferrer" className="case-read-btn-v2" style={{ backgroundColor: c.color }}>
+                      <a href={c.link} className="case-read-btn-v2" style={{ backgroundColor: c.color }}>
                         View Case Study <i className="fa-solid fa-arrow-right-long"></i>
                       </a>
                     </div>
@@ -680,7 +680,7 @@ export default function Home() {
               <span><i className="fa-solid fa-check"></i> Global Projects</span>
               <span><i className="fa-solid fa-check"></i> ISO Certified Workplace</span>
             </div>
-            <a href="https://brainstation-23.easy.jobs/" target="_blank" rel="noopener noreferrer" className="btn-hero-primary">
+            <a href="#contact" className="btn-hero-primary">
               View Open Positions <i className="fa-solid fa-briefcase"></i>
             </a>
           </div>
@@ -702,10 +702,10 @@ export default function Home() {
 
               <div className="contact-social-row">
                 {[
-                  { icon: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/company/brainstation-23' },
-                  { icon: 'fa-brands fa-facebook', href: 'https://www.facebook.com/brainstation23/' },
-                  { icon: 'fa-brands fa-twitter', href: 'https://twitter.com/BrainStation23' },
-                  { icon: 'fa-brands fa-youtube', href: 'https://www.youtube.com/channel/UCQ5AqU2eGEzvxiG8GUFF6Cw' },
+                  { icon: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/company/intactic' },
+                  { icon: 'fa-brands fa-facebook', href: 'https://www.facebook.com/intactic' },
+                  { icon: 'fa-brands fa-twitter', href: 'https://twitter.com/intactic' },
+                  { icon: 'fa-brands fa-youtube', href: 'https://www.youtube.com/@intactic' },
                 ].map((s, i) => (
                   <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className="contact-social-btn">
                     <i className={s.icon}></i>

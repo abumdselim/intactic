@@ -1,5 +1,5 @@
 /* 
-   Brain Station 23 - Custom Stylesheet
+   Intactic Innovations - Custom Stylesheet
    Design Tokens, Desktop Header, Megamenus, Mobile Drawer & Typography
 */
 
@@ -118,7 +118,7 @@ ul, li {
 }
 
 /* When hero is transparent, if we want header links to be light, we configure it.
-   Since Brain Station 23 uses a dark theme style text, we'll keep the text dark `#11172C` by default,
+   Since Intactic Innovations uses a dark theme style text, we'll keep the text dark `#11172C` by default,
    which stands out on a clean light hero section. */
 
 /* -------------------------------------------------------------

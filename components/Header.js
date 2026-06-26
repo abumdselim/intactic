@@ -63,11 +63,11 @@ export default function Header() {
             <Image
               src="https://res.cloudinary.com/det1qnlrh/image/upload/v1782432654/Intactic_ltgcnt.png"
               alt="Intactic Logo"
-              width={220}
-              height={33}
+              width={200}
+              height={40}
               priority
               className="logo-img"
-              style={{ objectFit: 'contain' }}
+              style={{ width: 'auto', height: '36px', objectFit: 'contain' }}
             />
           </a>
 
@@ -230,9 +230,9 @@ export default function Header() {
             <Image
               src="https://res.cloudinary.com/det1qnlrh/image/upload/v1782432654/Intactic_ltgcnt.png"
               alt="Intactic Logo"
-              width={160}
-              height={32}
-              style={{ objectFit: 'contain' }}
+              width={180}
+              height={36}
+              style={{ width: 'auto', height: '32px', objectFit: 'contain' }}
             />
           </a>
           <button className="drawer-close" aria-label="Close Navigation Menu" onClick={closeDrawer}>

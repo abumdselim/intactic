@@ -9,9 +9,9 @@ export default function Footer() {
             <Image
               src="https://res.cloudinary.com/det1qnlrh/image/upload/v1782432654/Intactic-white_vmyikx.png"
               alt="Intactic Logo"
-              width={180}
-              height={28}
-              style={{ objectFit: 'contain' }}
+              width={200}
+              height={40}
+              style={{ width: 'auto', height: '36px', objectFit: 'contain', marginBottom: '8px' }}
             />
           </a>
           <p className="brand-desc">Vetted engineering teams, AI-accelerated delivery models, and regulatory-compliant custom applications since 2006.</p>

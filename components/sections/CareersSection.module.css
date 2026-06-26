@@ -1,0 +1,58 @@
+/* ── CAREERS ── */
+.careers-callout {
+  padding: 100px 24px;
+  background: linear-gradient(135deg, #1D9EDA 0%, #0F6FA8 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.careers-callout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.careers-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+.careers-callout h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.careers-callout p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.careers-perks {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.careers-perks span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.careers-perks span i { color: rgba(255,255,255,0.7); }
+
+@media (max-width: 1024px) {
+  .careers-callout h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 767px) {
+  .careers-callout { padding: 60px 16px; }
+  .careers-perks { flex-direction: column; gap: 10px; align-items: flex-start; }
+}
+
+

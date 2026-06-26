@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { heroSlides } from '../../data/contentData';
+import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,34 +18,34 @@ export default function HeroSection() {
   const handleNextSlide = () => setCurrentSlide((prev) => (prev + 1) % slidesCount);
 
   return (
-    <section className="hero-section" id="hero">
+    <section className={styles['hero-section']} id="hero">
       {/* Background mesh gradients */}
-      <div className="hero-bg-glow-1" aria-hidden="true" />
-      <div className="hero-bg-glow-2" aria-hidden="true" />
+      <div className={styles['hero-bg-glow-1']} aria-hidden="true" />
+      <div className={styles['hero-bg-glow-2']} aria-hidden="true" />
 
-      <div className="hero-slides-track" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+      <div className={styles['hero-slides-track']} style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {heroSlides.map((slide, idx) => (
-          <div key={idx} className={`hero-slide-full ${currentSlide === idx ? 'active' : ''}`}>
-            <div className="hero-slide-inner">
-              <div className="hero-text-col">
-                <span className="hero-badge">
+          <div key={idx} className={`${styles['hero-slide-full']} ${currentSlide === idx ? styles.active : ''}`}>
+            <div className={styles['hero-slide-inner']}>
+              <div className={styles['hero-text-col']}>
+                <span className={styles['hero-badge']}>
                   <i className={slide.badge.icon}></i> {slide.badge.text}
                 </span>
-                <p className="hero-sub">{slide.tag}</p>
-                <h1 className="hero-h1">
+                <p className={styles['hero-sub']}>{slide.tag}</p>
+                <h1 className={styles['hero-h1']}>
                   Build <span className="gradient-text">{slide.titleHighlight}</span> {slide.title.replace(slide.titleHighlight, '')}
                 </h1>
-                <p className="hero-desc">{slide.desc}</p>
-                <div className="hero-cta-row">
-                  <a href={slide.cta1.href} className="btn-hero-primary">{slide.cta1.label} <i className="fa-solid fa-arrow-right-long"></i></a>
-                  <a href="#services" className="btn-hero-secondary">Explore Services <i className="fa-solid fa-angle-down"></i></a>
+                <p className={styles['hero-desc']}>{slide.desc}</p>
+                <div className={styles['hero-cta-row']}>
+                  <a href={slide.cta1.href} className={styles['btn-hero-primary']}>{slide.cta1.label} <i className="fa-solid fa-arrow-right-long"></i></a>
+                  <a href="#services" className={styles['btn-hero-secondary']}>Explore Services <i className="fa-solid fa-angle-down"></i></a>
                 </div>
               </div>
               
-              <div className="hero-img-col">
-                <div className="hero-visual-grid">
+              <div className={styles['hero-img-col']}>
+                <div className={styles['hero-visual-grid']}>
                   {/* Overlapping 3D Image Card 1 */}
-                  <div className="hero-card-stacked hero-card-img-1">
+                  <div className={`${styles['hero-card-stacked']} ${styles['hero-card-img-1']}`}>
                     <Image
                       src={slide.img1}
                       alt={slide.badge.text}
@@ -58,7 +59,7 @@ export default function HeroSection() {
                   </div>
                   
                   {/* Overlapping 3D Image Card 2 */}
-                  <div className="hero-card-stacked hero-card-img-2">
+                  <div className={`${styles['hero-card-stacked']} ${styles['hero-card-img-2']}`}>
                     <Image
                       src={slide.img2}
                       alt={slide.badge.text}
@@ -71,25 +72,25 @@ export default function HeroSection() {
                   </div>
 
                   {/* Stat Card 1 (Glassmorphic) */}
-                  <div className="hero-card-stacked hero-card-stat-1">
-                    <span className="hero-grid-stat-num">{slide.stats[0].num}</span>
-                    <span className="hero-grid-stat-lbl">{slide.stats[0].label}</span>
+                  <div className={`${styles['hero-card-stacked']} ${styles['hero-card-stat-1']}`}>
+                    <span className={styles['hero-grid-stat-num']}>{slide.stats[0].num}</span>
+                    <span className={styles['hero-grid-stat-lbl']}>{slide.stats[0].label}</span>
                   </div>
                   
                   {/* Stat Card 2 (Dark/Brand Glow) */}
-                  <div className="hero-card-stacked hero-card-stat-2">
-                    <span className="hero-grid-stat-num">{slide.stats[1].num}</span>
-                    <span className="hero-grid-stat-lbl">{slide.stats[1].label}</span>
+                  <div className={`${styles['hero-card-stacked']} ${styles['hero-card-stat-2']}`}>
+                    <span className={styles['hero-grid-stat-num']}>{slide.stats[1].num}</span>
+                    <span className={styles['hero-grid-stat-lbl']}>{slide.stats[1].label}</span>
                   </div>
 
                   {/* Decorative Floating Tech Badges */}
-                  <div className="hero-floating-badge badge-float-1">
+                  <div className={`${styles['hero-floating-badge']} ${styles['badge-float-1']}`}>
                     <i className="fa-solid fa-brain"></i> AI & ML
                   </div>
-                  <div className="hero-floating-badge badge-float-2">
+                  <div className={`${styles['hero-floating-badge']} ${styles['badge-float-2']}`}>
                     <i className="fa-brands fa-aws"></i> Cloud Native
                   </div>
-                  <div className="hero-floating-badge badge-float-3">
+                  <div className={`${styles['hero-floating-badge']} ${styles['badge-float-3']}`}>
                     <i className="fa-solid fa-shield-halved"></i> ISO 27001
                   </div>
                 </div>
@@ -100,20 +101,21 @@ export default function HeroSection() {
       </div>
 
       {/* Arrows */}
-      <button className="hero-arrow hero-arrow-left" onClick={handlePrevSlide} aria-label="Previous">
+      <button className={`${styles['hero-arrow']} ${styles['hero-arrow-left']}`} onClick={handlePrevSlide} aria-label="Previous">
         <i className="fa-solid fa-chevron-left"></i>
       </button>
-      <button className="hero-arrow hero-arrow-right" onClick={handleNextSlide} aria-label="Next">
+      <button className={`${styles['hero-arrow']} ${styles['hero-arrow-right']}`} onClick={handleNextSlide} aria-label="Next">
         <i className="fa-solid fa-chevron-right"></i>
       </button>
 
       {/* Dots */}
-      <div className="hero-dots">
+      <div className={styles['hero-dots']}>
         {heroSlides.map((_, idx) => (
-          <button key={idx} className={`hero-dot ${currentSlide === idx ? 'active' : ''}`} onClick={() => setCurrentSlide(idx)} aria-label={`Slide ${idx + 1}`}></button>
+          <button key={idx} className={`${styles['hero-dot']} ${currentSlide === idx ? styles.active : ''}`} onClick={() => setCurrentSlide(idx)} aria-label={`Slide ${idx + 1}`}></button>
         ))}
       </div>
 
     </section>
   );
 }
+

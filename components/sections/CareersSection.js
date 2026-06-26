@@ -1,27 +1,22 @@
+import styles from './CareersSection.module.css';
+
 export default function CareersSection() {
   return (
-    <section className="careers-section" id="careers">
-      <div className="section-container">
-        <div className="careers-layout">
-          <div className="careers-text">
-            <h2>Join the Intactic Innovations Team</h2>
-            <p>Work with top-tier global talent on cutting-edge projects. We foster an environment of continuous learning, innovation, and growth. Whether you are an engineer, designer, or product manager, there's a place for you to thrive.</p>
-            <ul className="perks-list">
-              <li><i className="fa-solid fa-check"></i> Competitive Compensation</li>
-              <li><i className="fa-solid fa-check"></i> Remote/Hybrid Flexibility</li>
-              <li><i className="fa-solid fa-check"></i> Global Exposure</li>
-              <li><i className="fa-solid fa-check"></i> Health & Wellness Benefits</li>
-            </ul>
-            <a href="#contact" className="btn-hero-primary" style={{ marginTop: '20px' }}>Explore Open Roles <i className="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div className="careers-visual">
-            <div className="careers-image-placeholder">
-              <i className="fa-solid fa-users"></i>
-              <span>Life at Intactic Innovations</span>
-            </div>
-          </div>
+    <section className={styles['careers-callout']} id="careers">
+      <div className={styles['careers-inner']}>
+        <h2>Join a Team of Innovators</h2>
+        <p>We're looking for passionate developers, engineers, and digital architects. Elevate your career by building platforms for global enterprises.</p>
+        <div className={styles['careers-perks']}>
+          <span><i className="fa-solid fa-check"></i> Hybrid Work</span>
+          <span><i className="fa-solid fa-check"></i> Tech Allowances</span>
+          <span><i className="fa-solid fa-check"></i> Global Projects</span>
+          <span><i className="fa-solid fa-check"></i> ISO Certified Workplace</span>
         </div>
+        <a href="#contact" className="btn-hero-primary">
+          View Open Positions <i className="fa-solid fa-briefcase"></i>
+        </a>
       </div>
     </section>
   );
 }
+

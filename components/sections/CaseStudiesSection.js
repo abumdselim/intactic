@@ -47,16 +47,7 @@ export default function CaseStudiesSection() {
           <div className={styles['case-text-side']}>
             <span className={styles['case-badge']}>{c.badge}</span>
 
-            <div className={styles['case-logo-wrap']}>
-              <Image
-                src={c.logo || c.img}
-                alt={c.title + ' logo'}
-                width={160}
-                height={60}
-                style={{ objectFit: 'contain', maxHeight: '60px', width: 'auto' }}
-                unoptimized
-              />
-            </div>
+
 
             <h3 className={styles['case-title']}>{c.title}</h3>
             <p className={styles['case-desc']}>{c.desc}</p>

@@ -62,11 +62,11 @@ export const caseStudiesData = [
     highlights: [
       { icon: 'fa-solid fa-shield-halved', label: '100% Client-Side Processing' },
       { icon: 'fa-solid fa-lock', label: 'Zero Uploads. Zero Tracking.' },
-      { icon: 'fa-solid fa-toolbox', label: '40+ PDF Tools Available' },
+      { icon: 'fa-solid fa-toolbox', label: '100+ PDF Tools Available' },
       { icon: 'fa-solid fa-bolt', label: 'No Account Required' },
     ],
     stats: [
-      { num: '40+', lbl: 'PDF Tools' },
+      { num: '100+', lbl: 'PDF Tools' },
       { num: '100%', lbl: 'Browser-Based' },
     ],
     img: 'https://res.cloudinary.com/det1qnlrh/image/upload/v1782432829/bengaldesk_3_svpztz_rubzts.png',

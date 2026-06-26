@@ -107,7 +107,7 @@ export default function Home() {
       badge: { icon: 'fa-solid fa-bolt', text: 'Global Digital Partner' },
       tag: 'Global Software Development Agency',
       title: <>Build <span className="gradient-text">AI-Powered</span>, Scalable Software for Startups to Enterprises.</>,
-      desc: 'From fintech to eCommerce, we deliver end-to-end solutions tailored to your business—fast, flexible, and reliable.',
+      desc: 'From custom SaaS to eCommerce, we deliver end-to-end solutions tailored to your business—fast, flexible, and reliable.',
       cta1: { label: 'Schedule a Call', href: '#contact' },
       stats: [
         { num: '850+', label: 'Tech Professionals' },
@@ -133,21 +133,7 @@ export default function Home() {
       img1Radius: '12px 12px 12px 0px',
       img2Radius: '12px 0px 12px 12px',
     },
-    {
-      badge: { icon: 'fa-solid fa-wallet', text: 'Fintech Solutions' },
-      tag: 'Accelerate Financial Innovation',
-      title: <>Launch Wallet or Payments in <span className="gradient-text">90 Days</span>, Compliant</>,
-      desc: 'Empowering Banks, NBFIs & Fintechs to accelerate digital transformation with faster launches, lower costs & seamless UX.',
-      cta1: { label: 'Book A Demo', href: 'https://calendly.com/meeting-brainstation-23/30min' },
-      stats: [
-        { num: '6', label: 'Global Offices' },
-        { num: 'ISO 27001', label: 'Certified Teams' },
-      ],
-      img1: 'https://brainstation-23.com/wp-content/uploads/2025/10/Hero-Img-v3.1.webp',
-      img2: 'https://brainstation-23.com/wp-content/uploads/2025/10/Hero-Img-v3.2.webp',
-      img1Radius: '12px 12px 0px 12px',
-      img2Radius: '0px 12px 12px 12px',
-    },
+
   ];
 
   const caseStudiesData = [
@@ -163,18 +149,7 @@ export default function Home() {
       ],
       img: 'https://brainstation-23.com/wp-content/uploads/2025/06/image-23.png',
     },
-    {
-      badge: 'Fintech',
-      color: '#1D9EDA',
-      title: 'City Bank: Revolutionizing Digital Banking with CityTouch',
-      desc: 'City Bank partnered with Brain Station 23 to launch CityTouch, a cutting-edge digital banking platform, enhancing user experience and driving financial inclusion. With 446,000+ users and $3B+ in transactions, CityTouch set a new benchmark in Bangladesh’s fintech landscape.',
-      link: '/city-bank/',
-      stats: [
-        { num: '500K+', lbl: 'City Touch Users in 2025' },
-        { num: '$3B', lbl: 'Transaction Volume' },
-      ],
-      img: 'https://brainstation-23.com/wp-content/uploads/2025/06/image-25.png',
-    },
+
     {
       badge: 'AEM Solutions',
       color: '#6C63FF',
@@ -404,7 +379,7 @@ export default function Home() {
             <div className="industries-grid">
               {[
                 { icon: 'fa-solid fa-graduation-cap', label: 'EdTech', desc: 'LMS solutions built with Moodle: live classes, assessments, compliance & reporting to empower learners.' },
-                { icon: 'fa-solid fa-landmark-dome', label: 'Fintech', desc: 'Secure, scalable fintech & blockchain platforms built to transform payments, lending, and risk management.' },
+
                 { icon: 'fa-solid fa-cart-shopping', label: 'E-Commerce', desc: 'Transform your store with certified nopCommerce themes, plugins & custom apps for speed, UX & conversion.' },
                 { icon: 'fa-solid fa-pills', label: 'Pharma', desc: 'Regulation-first pharma & healthcare software: compliant platforms supporting HCPs, education & analytics.' },
                 { icon: 'fa-solid fa-tower-broadcast', label: 'Telecom', desc: 'Enterprise-grade telecom applications that scale securely to serve millions with reliability & speed.' },

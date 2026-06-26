@@ -125,7 +125,6 @@ export default function Header() {
                 <a href="#industries" className="nav-link">Industries <i className="fa-solid fa-chevron-down nav-arrow"></i></a>
                 <div className="dropdown-panel industries-dropdown">
                   <ul className="dropdown-links grid-2-col">
-                    <li><a href="#industries"><i className="fa-solid fa-landmark-dome"></i> Fintech</a></li>
                     <li><a href="#industries"><i className="fa-solid fa-pills"></i> Pharma</a></li>
                     <li><a href="#industries"><i className="fa-solid fa-tower-broadcast"></i> Telecom</a></li>
                     <li><a href="#industries"><i className="fa-solid fa-house-chimney"></i> Real Estate</a></li>
@@ -144,16 +143,6 @@ export default function Header() {
                 <a href="#products" className="nav-link">Products <i className="fa-solid fa-chevron-down nav-arrow"></i></a>
                 <div className="megamenu-panel products-megamenu">
                   <div className="megamenu-grid">
-                    <div className="megamenu-col">
-                      <h4 className="megamenu-title"><i className="fa-solid fa-wallet"></i> Fintech</h4>
-                      <ul className="megamenu-links">
-                        <li><a href="#products">Digital Banking Software</a></li>
-                        <li><a href="#products">E-wallet Software</a></li>
-                        <li><a href="#products">Digital Lending & Credit</a></li>
-                        <li><a href="#products">Insurance 360</a></li>
-                        <li><a href="#products">Cross Border Payments Solution</a></li>
-                      </ul>
-                    </div>
                     <div className="megamenu-col">
                       <h4 className="megamenu-title"><i className="fa-solid fa-heart-pulse"></i> Healthcare</h4>
                       <ul className="megamenu-links">
@@ -288,7 +277,6 @@ export default function Header() {
               </button>
               <div className="accordion-panel">
                 <ul className="sub-links">
-                  <li><a href="#industries" onClick={closeDrawer}>Fintech</a></li>
                   <li><a href="#industries" onClick={closeDrawer}>Pharma</a></li>
                   <li><a href="#industries" onClick={closeDrawer}>Telecom</a></li>
                   <li><a href="#industries" onClick={closeDrawer}>Real Estate</a></li>
@@ -308,15 +296,6 @@ export default function Header() {
                 Products <i className="fa-solid fa-chevron-down accordion-arrow"></i>
               </button>
               <div className="accordion-panel">
-                <div className="accordion-section">
-                  <span className="section-title">Fintech</span>
-                  <ul className="sub-links">
-                    <li><a href="#products" onClick={closeDrawer}>Digital Banking Software</a></li>
-                    <li><a href="#products" onClick={closeDrawer}>E-wallet Software</a></li>
-                    <li><a href="#products" onClick={closeDrawer}>Digital Lending & Credit</a></li>
-                    <li><a href="#products" onClick={closeDrawer}>Insurance 360</a></li>
-                  </ul>
-                </div>
                 <div className="accordion-section">
                   <span className="section-title">Healthcare</span>
                   <ul className="sub-links">

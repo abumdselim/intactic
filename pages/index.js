@@ -473,7 +473,7 @@ export default function Home() {
               <div className="ai-visual">
                 <div className="ai-card-grid">
                   {[
-                    { icon: 'fa-solid fa-microchip', label: 'GPT-4 Integration', sub: 'OpenAI APIs' },
+                    { icon: 'fa-solid fa-microchip', label: 'LLMs & Generative AI', sub: 'OpenAI, Claude, LLaMA' },
                     { icon: 'fa-solid fa-diagram-project', label: 'LangChain & LlamaIndex', sub: 'RAG Pipelines' },
                     { icon: 'fa-brands fa-python', label: 'Python ML Stack', sub: 'TensorFlow, PyTorch' },
                     { icon: 'fa-solid fa-cloud', label: 'Cloud AI Services', sub: 'AWS SageMaker, GCP Vertex' },

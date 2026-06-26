@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import { heroSlides, trustLogos } from '../../data/contentData';
 import styles from './HeroSection.module.css';
 
@@ -35,7 +34,7 @@ export default function HeroSection() {
         <div className={styles.heroBgGlow1} aria-hidden="true" />
         <div className={styles.heroBgGlow2} aria-hidden="true" />
 
-        {/* Slides Container — fade-based */}
+        {/* Slides Container */}
         <div className={styles.heroSlidesContainer}>
           {heroSlides.map((slide, idx) => (
             <div
@@ -85,57 +84,77 @@ export default function HeroSection() {
 
                 {/* ── Right: Visual Column ── */}
                 <div className={styles.heroImgCol} aria-hidden="true">
-                  <div className={styles.heroVisualGrid}>
-                    {/* Image card 1 — main, tilted left */}
-                    <div className={`${styles.heroCard} ${styles.heroCardImg1}`}>
-                      <Image
-                        src={slide.img1}
-                        alt=""
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        priority={idx === 0}
-                        unoptimized
-                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                      />
+                  <div className={styles.heroVisualWrap}>
+
+                    {/* Main dashboard card */}
+                    <div className={styles.visualCard}>
+                      {/* Top browser bar */}
+                      <div className={styles.vcBrowserBar}>
+                        <div className={styles.vcDots}>
+                          <span className={styles.vcDot} style={{ background: '#FF5F57' }} />
+                          <span className={styles.vcDot} style={{ background: '#FFBD2E' }} />
+                          <span className={styles.vcDot} style={{ background: '#28CA41' }} />
+                        </div>
+                        <div className={styles.vcUrlBar}>intactic.com/dashboard</div>
+                      </div>
+
+                      {/* Dashboard body */}
+                      <div className={styles.vcBody}>
+                        {/* Metrics row */}
+                        <div className={styles.vcMetricsRow}>
+                          {slide.stats.map((s, i) => (
+                            <div key={i} className={styles.vcMetric}>
+                              <span className={styles.vcMetricNum}>{s.num}</span>
+                              <span className={styles.vcMetricLbl}>{s.label}</span>
+                            </div>
+                          ))}
+                          <div className={styles.vcMetric}>
+                            <span className={styles.vcMetricNum}>12+</span>
+                            <span className={styles.vcMetricLbl}>Yrs Experience</span>
+                          </div>
+                        </div>
+
+                        {/* Animated bar chart */}
+                        <div className={styles.vcChart}>
+                          {[65, 80, 55, 90, 70, 95, 60].map((h, i) => (
+                            <div key={i} className={styles.vcBar} style={{ '--bar-h': h + '%', '--bar-delay': (i * 0.08) + 's' }} />
+                          ))}
+                        </div>
+
+                        {/* Activity feed */}
+                        <div className={styles.vcFeed}>
+                          <div className={`${styles.vcFeedItem} ${styles.vcFeedItemBlue}`}>
+                            <i className="fa-solid fa-circle-check" />
+                            <span>Product shipped — on schedule</span>
+                          </div>
+                          <div className={`${styles.vcFeedItem} ${styles.vcFeedItemGreen}`}>
+                            <i className="fa-solid fa-bolt" />
+                            <span>Build pipeline successful</span>
+                          </div>
+                          <div className={`${styles.vcFeedItem} ${styles.vcFeedItemAmber}`}>
+                            <i className="fa-solid fa-users" />
+                            <span>New client onboarded</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Image card 2 — secondary, tilted right */}
-                    <div className={`${styles.heroCard} ${styles.heroCardImg2}`}>
-                      <Image
-                        src={slide.img2}
-                        alt=""
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        unoptimized
-                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                      />
+                    {/* Floating stack pills */}
+                    <div className={`${styles.stackPill} ${styles.stackPill1}`}>
+                      <i className="fa-brands fa-react" />
+                      <span>React</span>
+                    </div>
+                    <div className={`${styles.stackPill} ${styles.stackPill2}`}>
+                      <i className="fa-brands fa-node-js" />
+                      <span>Node.js</span>
+                    </div>
+                    <div className={`${styles.stackPill} ${styles.stackPill3}`}>
+                      <i className="fa-brands fa-python" />
+                      <span>Python / AI</span>
                     </div>
 
-                    {/* Glassmorphic stat card */}
-                    <div className={`${styles.heroCard} ${styles.heroCardStat1}`}>
-                      <span className={styles.cardStatNum}>{slide.stats[0].num}</span>
-                      <span className={styles.cardStatLbl}>{slide.stats[0].label}</span>
-                    </div>
-
-                    {/* Dark brand stat card */}
-                    <div className={`${styles.heroCard} ${styles.heroCardStat2}`}>
-                      <span className={styles.cardStatNum}>{slide.stats[1].num}</span>
-                      <span className={styles.cardStatLbl}>{slide.stats[1].label}</span>
-                    </div>
-
-                    {/* Floating tech badges */}
-                    <div className={`${styles.floatingBadge} ${styles.badgeFloat1}`}>
-                      <i className="fa-solid fa-brain" aria-hidden="true" />
-                      AI &amp; ML
-                    </div>
-                    <div className={`${styles.floatingBadge} ${styles.badgeFloat2}`}>
-                      <i className="fa-brands fa-aws" aria-hidden="true" />
-                      Cloud Native
-                    </div>
-                    <div className={`${styles.floatingBadge} ${styles.badgeFloat3}`}>
-                      <i className="fa-solid fa-shield-halved" aria-hidden="true" />
-                      ISO 27001
-                    </div>
+                    {/* Pulse ring */}
+                    <div className={styles.pulseRing} aria-hidden="true" />
                   </div>
                 </div>
               </div>

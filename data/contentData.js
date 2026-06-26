@@ -13,12 +13,13 @@ export const heroSlides = [
     postTitle: 'Scalable Software That Grows With Your Business.',
     desc: 'From custom SaaS to enterprise platforms — Intactic delivers AI-powered, cloud-native solutions engineered for speed, security, and scale.',
     cta1: { label: 'Start a Project', href: '#contact' },
+    accent: '#1D9EDA',
     stats: [
       { num: '200+', label: 'Products Shipped' },
       { num: '98%', label: 'Client Satisfaction' },
     ],
-    img1: 'https://images.unsplash.com/photo-1661688963878-4f3282dd1263?w=600&q=80',
-    img2: 'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=500&q=80',
+    img1: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=85',
+    img2: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80',
   },
   {
     badge: { icon: 'fa-solid fa-signature', text: 'Elite Personal Branding' },
@@ -28,14 +29,16 @@ export const heroSlides = [
     postTitle: 'With Bespoke Web Presence Built For Leaders.',
     desc: 'Scale your reputation beyond referrals. We craft premium, custom-coded digital portfolios and booking systems that position doctors, engineers, and executives as the definitive voice in their field.',
     cta1: { label: 'Get Custom Build', href: '#contact' },
+    accent: '#FBAF32',
     stats: [
       { num: '100%', label: 'Bespoke Code' },
       { num: '10X', label: 'Brand Authority' },
     ],
-    img1: 'https://images.unsplash.com/photo-1604763048888-3506f7cd3adf?w=600&q=80',
-    img2: 'https://images.unsplash.com/photo-1661688791119-418b28a3ca60?w=500&q=80',
+    img1: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=85',
+    img2: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80',
   },
 ];
+
 
 export const trustLogos = [
   { icon: 'fa-brands fa-google', label: 'Google' },

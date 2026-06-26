@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════════
-   HERO SECTION — Production-grade CSS Module
+   HERO SECTION — Modern Premium CSS Module
    ════════════════════════════════════════════════════ */
 
 /* ── Section Shell ── */
@@ -9,7 +9,6 @@
   flex-direction: column;
   background-color: #F8FAFC;
   padding-top: var(--header-height-normal);
-  /* no overflow:hidden so glow orbs can breathe */
 }
 
 /* ── Ambient background glow orbs ── */
@@ -17,9 +16,9 @@
   position: absolute;
   top: -80px;
   right: -60px;
-  width: 640px;
-  height: 640px;
-  background: radial-gradient(circle, rgba(29, 158, 218, 0.13) 0%, transparent 70%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(29, 158, 218, 0.10) 0%, transparent 65%);
   filter: blur(80px);
   z-index: 0;
   pointer-events: none;
@@ -30,9 +29,9 @@
   position: absolute;
   bottom: 10%;
   left: -80px;
-  width: 560px;
-  height: 560px;
-  background: radial-gradient(circle, rgba(251, 175, 50, 0.09) 0%, transparent 70%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(251, 175, 50, 0.08) 0%, transparent 65%);
   filter: blur(100px);
   z-index: 0;
   pointer-events: none;
@@ -45,21 +44,18 @@
 }
 
 /* ════════════════════════════════════════════════════
-   FADE-BASED SLIDE SYSTEM
+   SLIDE SYSTEM
    ════════════════════════════════════════════════════ */
-
-/* Outer container — fills remaining space above trust bar */
 .heroSlidesContainer {
   position: relative;
   flex: 1;
-  min-height: 600px; /* Sensible minimum height for desktop layout */
+  min-height: 580px;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 
-/* Every slide is stacked via CSS Grid */
 .heroSlide {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
@@ -69,21 +65,19 @@
   pointer-events: none;
 }
 
-/* Active slide is visible and interactive */
 .heroSlide.active {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* ── Slide inner layout ── */
 .heroSlideInner {
   max-width: var(--container-max-width);
   width: 100%;
   margin: 0 auto;
-  padding: 40px 24px; /* Reduced vertical padding to avoid overflow */
+  padding: 48px 24px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 64px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -98,54 +92,49 @@
   align-items: flex-start;
 }
 
-/* Badge pill */
 .heroBadge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(29, 158, 218, 0.08);
-  border: 1px solid rgba(29, 158, 218, 0.2);
-  color: var(--color-brand);
-  font-size: 0.8rem;
+  border: 1px solid;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 7px 16px;
   border-radius: 50px;
   margin-bottom: 20px;
+  transition: all 0.4s ease;
 }
 
 .heroBadge i {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
-/* Tag line */
 .heroTag {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--color-text-muted);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
-/* Headline */
 .heroH1 {
-  font-size: clamp(2rem, 3.6vw, 3.6rem);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.11;
   color: var(--color-text-dark);
-  margin: 0 0 20px;
-  letter-spacing: -0.025em;
+  margin: 0 0 22px;
+  letter-spacing: -0.03em;
 }
 
-/* Description */
 .heroDesc {
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   color: var(--color-text-muted);
-  line-height: 1.75;
+  line-height: 1.78;
   margin-bottom: 36px;
-  max-width: 500px;
+  max-width: 490px;
 }
 
 /* CTA row */
@@ -153,7 +142,7 @@
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .btnPrimary {
@@ -161,13 +150,13 @@
   color: #000;
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 50px;
   border: none;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 6px 22px rgba(251, 175, 50, 0.3);
+  box-shadow: 0 6px 24px rgba(251, 175, 50, 0.32);
   transition: all 0.25s ease;
   cursor: pointer;
   text-decoration: none;
@@ -176,7 +165,7 @@
 .btnPrimary:hover {
   background: #E69D24;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(251, 175, 50, 0.4);
+  box-shadow: 0 12px 32px rgba(251, 175, 50, 0.42);
 }
 
 .btnSecondary {
@@ -184,7 +173,7 @@
   color: var(--color-text-dark);
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 12px 24px;
+  padding: 12px 26px;
   border-radius: 50px;
   border: 2px solid var(--color-border);
   display: inline-flex;
@@ -197,32 +186,40 @@
 }
 .btnSecondary:hover {
   border-color: var(--color-text-dark);
-  background: rgba(17, 23, 44, 0.03);
+  background: rgba(17, 23, 44, 0.04);
   transform: translateY(-2px);
 }
 
-/* Inline stats row (below CTA) */
+/* Stats row */
 .heroStatsRow {
   display: flex;
-  gap: 40px;
+  align-items: center;
+  gap: 32px;
+}
+
+.heroStatDivider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-border);
 }
 
 .heroStatItem {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .heroStatNum {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 800;
   color: var(--color-text-dark);
   letter-spacing: -0.03em;
   line-height: 1;
+  transition: color 0.4s ease;
 }
 
 .heroStatLbl {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-text-muted);
   text-transform: uppercase;
@@ -230,7 +227,7 @@
 }
 
 /* ════════════════════════════════════════════════════
-   VISUAL / IMAGE COLUMN — Dashboard Mockup
+   VISUAL / IMAGE COLUMN
    ════════════════════════════════════════════════════ */
 .heroImgCol {
   position: relative;
@@ -239,161 +236,206 @@
 .heroVisualWrap {
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
+  height: 460px;
   margin: 0 auto;
 }
 
-/* ── Main dashboard card ── */
-.visualCard {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 24px 60px rgba(17, 23, 44, 0.13);
-  border: 1px solid rgba(17, 23, 44, 0.07);
+/* ── Decorative dot-grid background ── */
+.gridBg {
+  position: absolute;
+  inset: -30px;
+  background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+/* ── Main large image card ── */
+.mainImgCard {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 320px;
+  height: 240px;
+  border-radius: 20px;
   overflow: hidden;
-  animation: cardFloat 6s ease-in-out infinite alternate;
+  box-shadow:
+    0 2px 0 0 var(--slide-accent, #1D9EDA),
+    0 24px 56px rgba(17, 23, 44, 0.16);
+  z-index: 3;
+  animation: cardFloat1 7s ease-in-out infinite alternate;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-@keyframes cardFloat {
-  from { transform: translateY(0px); }
-  to   { transform: translateY(-12px); }
+@keyframes cardFloat1 {
+  from { transform: rotate(-2deg) translateY(0); }
+  to   { transform: rotate(-2deg) translateY(-10px); }
 }
 
-/* Browser chrome bar */
-.vcBrowserBar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  background: #F1F5F9;
-  border-bottom: 1px solid rgba(17, 23, 44, 0.06);
-}
-
-.vcDots {
-  display: flex;
-  gap: 5px;
-}
-
-.vcDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  transition: transform 0.6s ease;
+}
+.mainImgCard:hover .mainImg {
+  transform: scale(1.04);
 }
 
-.vcUrlBar {
-  flex: 1;
-  background: #fff;
-  border-radius: 6px;
-  padding: 4px 10px;
-  font-size: 0.72rem;
-  color: #94A3B8;
-  font-family: monospace;
-  border: 1px solid rgba(17, 23, 44, 0.08);
+.mainImgScrim {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  transition: background 0.4s ease;
 }
 
-/* Dashboard body */
-.vcBody {
-  padding: 20px;
+/* "Live & Deployed" badge on image */
+.imgBadgePill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* Metrics row */
-.vcMetricsRow {
-  display: flex;
-  gap: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid rgba(17, 23, 44, 0.07);
-}
-
-.vcMetric {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 12px 8px;
-  background: #F8FAFC;
-  border-right: 1px solid rgba(17, 23, 44, 0.07);
-  gap: 3px;
-}
-.vcMetric:last-child { border-right: none; }
-
-.vcMetricNum {
-  font-size: 1.25rem;
-  font-weight: 800;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50px;
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
   color: var(--color-text-dark);
-  line-height: 1;
+  box-shadow: 0 4px 12px rgba(17, 23, 44, 0.1);
 }
 
-.vcMetricLbl {
-  font-size: 0.65rem;
+/* ── Secondary small image card — bottom right ── */
+.secondaryImgCard {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 230px;
+  height: 165px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(17, 23, 44, 0.14);
+  z-index: 2;
+  animation: cardFloat2 8s ease-in-out infinite alternate;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@keyframes cardFloat2 {
+  from { transform: rotate(2.5deg) translateY(0); }
+  to   { transform: rotate(2.5deg) translateY(-8px); }
+}
+
+.secondaryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.secondaryImgCard:hover .secondaryImg {
+  transform: scale(1.05);
+}
+
+.secondaryImgOverlay {
+  position: absolute;
+  inset: 0;
+  transition: background 0.4s ease;
+}
+
+/* ── Glassmorphic stat card — top right ── */
+.glassStatCard {
+  position: absolute;
+  top: 10px;
+  right: -12px;
+  width: 148px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 32px rgba(17, 23, 44, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
+  animation: floatY 5s ease-in-out infinite alternate;
+}
+
+.glassStatIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.glassStatNum {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+.glassStatLbl {
+  font-size: 0.7rem;
   font-weight: 600;
   color: #94A3B8;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  text-align: center;
 }
 
-/* Bar chart */
-.vcChart {
-  display: flex;
-  align-items: flex-end;
-  gap: 6px;
-  height: 72px;
-  background: #F8FAFC;
-  border-radius: 10px;
-  padding: 10px 12px 0;
-  border: 1px solid rgba(17, 23, 44, 0.06);
-}
-
-.vcBar {
-  flex: 1;
-  height: var(--bar-h);
-  border-radius: 4px 4px 0 0;
-  background: linear-gradient(to top, #1D9EDA, #6DCEF5);
-  animation: barGrow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-  animation-delay: var(--bar-delay);
-}
-
-@keyframes barGrow {
-  from { transform: scaleY(0); transform-origin: bottom; }
-  to   { transform: scaleY(1); transform-origin: bottom; }
-}
-
-/* Activity feed */
-.vcFeed {
+/* ── Dark metric card — bottom left ── */
+.darkMetricCard {
+  position: absolute;
+  bottom: 30px;
+  left: -14px;
+  width: 150px;
+  background: #11172C;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 40px rgba(17, 23, 44, 0.22);
+  border-radius: 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
+  z-index: 5;
+  animation: floatY 4.5s ease-in-out infinite alternate 1s;
 }
 
-.vcFeedItem {
+.darkMetricTop {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 0.78rem;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.darkMetricNum {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.darkMetricLbl {
+  font-size: 0.7rem;
   font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.vcFeedItemBlue {
-  background: rgba(29, 158, 218, 0.08);
-  color: #1D9EDA;
-}
-.vcFeedItemGreen {
-  background: rgba(34, 197, 94, 0.08);
-  color: #16A34A;
-}
-.vcFeedItemAmber {
-  background: rgba(251, 175, 50, 0.1);
-  color: #D97706;
-}
-
-/* ── Floating stack pills ── */
-.stackPill {
+/* ── Floating tech stack pills ── */
+.techPill {
   position: absolute;
   display: flex;
   align-items: center;
@@ -401,58 +443,56 @@
   background: #fff;
   border: 1px solid rgba(17, 23, 44, 0.08);
   border-radius: 50px;
-  padding: 7px 14px;
-  font-size: 0.78rem;
+  padding: 6px 14px;
+  font-size: 0.76rem;
   font-weight: 700;
   color: var(--color-text-dark);
-  box-shadow: 0 8px 24px rgba(17, 23, 44, 0.09);
+  box-shadow: 0 6px 20px rgba(17, 23, 44, 0.09);
   white-space: nowrap;
-  z-index: 5;
+  z-index: 6;
 }
-.stackPill i {
-  color: var(--color-brand);
-  font-size: 0.9rem;
-}
+.techPill i { font-size: 0.9rem; }
 
-.stackPill1 {
-  top: -18px;
-  right: 20px;
+.techPill1 {
+  top: -20px;
+  left: 20%;
   animation: floatY 4s ease-in-out infinite alternate;
 }
-.stackPill2 {
-  bottom: -16px;
-  left: 10px;
-  animation: floatY 5s ease-in-out infinite alternate 1s;
+.techPill2 {
+  top: 50%;
+  right: -20px;
+  animation: floatY 5s ease-in-out infinite alternate 0.8s;
 }
-.stackPill3 {
-  bottom: 20%;
-  right: -30px;
-  animation: floatY 4.5s ease-in-out infinite alternate 0.5s;
+.techPill3 {
+  bottom: -18px;
+  left: 30%;
+  animation: floatY 4.5s ease-in-out infinite alternate 1.5s;
 }
 
-/* ── Pulse ring decoration ── */
-.pulseRing {
+/* ── Accent ring ── */
+.accentRing {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 110%;
-  height: 110%;
+  width: 115%;
+  height: 115%;
   border-radius: 50%;
-  border: 2px solid rgba(29, 158, 218, 0.12);
-  animation: pulse 3s ease-out infinite;
+  border: 2px solid;
+  animation: ringPulse 4s ease-out infinite;
   pointer-events: none;
   z-index: 0;
-}
-
-@keyframes pulse {
-  0%   { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
-  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0; }
+  transition: border-color 0.4s ease;
 }
 
 @keyframes floatY {
   from { transform: translateY(0); }
   to   { transform: translateY(-10px); }
+}
+
+@keyframes ringPulse {
+  0%   { transform: translate(-50%, -50%) scale(0.88); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.12); opacity: 0; }
 }
 
 /* ════════════════════════════════════════════════════
@@ -486,7 +526,6 @@
 .heroArrowLeft  { left: 20px; }
 .heroArrowRight { right: 20px; }
 
-/* Dots — positioned just above trust bar inside container */
 .heroDots {
   position: absolute;
   bottom: 20px;
@@ -519,9 +558,9 @@
 .trustBar {
   position: relative;
   z-index: 2;
-  background: transparent; /* Seamless merge with Hero Bg */
-  border-top: 1px solid rgba(17, 23, 44, 0.06); /* Subtle top line */
-  border-bottom: 1px solid rgba(17, 23, 44, 0.06); /* Subtle bottom line to frame it */
+  background: transparent;
+  border-top: 1px solid rgba(17, 23, 44, 0.06);
+  border-bottom: 1px solid rgba(17, 23, 44, 0.06);
   padding: 24px 0;
   display: flex;
   flex-direction: column;
@@ -537,7 +576,6 @@
   text-align: center;
 }
 
-/* Marquee scrolling track */
 .marqueeContainer {
   position: relative;
   overflow: hidden;
@@ -581,7 +619,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff; /* White background for contrast */
+  background: #ffffff;
   border: 1px solid rgba(17, 23, 44, 0.05);
   padding: 9px 20px;
   border-radius: 10px;
@@ -589,14 +627,13 @@
   font-weight: 700;
   color: #94A3B8;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(17, 23, 44, 0.03); /* Subtle float shadow */
+  box-shadow: 0 4px 12px rgba(17, 23, 44, 0.03);
   transition: all 0.2s ease;
 }
 .trustLogoPill:hover {
-  background: #ffffff;
   border-color: rgba(29, 158, 218, 0.3);
   color: var(--color-brand);
-  box-shadow: 0 6px 20px rgba(29, 158, 218, 0.12); /* Stronger glow */
+  box-shadow: 0 6px 20px rgba(29, 158, 218, 0.12);
   transform: translateY(-2px);
 }
 .trustLogoPill i {
@@ -605,14 +642,13 @@
 }
 
 /* ════════════════════════════════════════════════════
-   HERO → CAPABILITIES WAVE BRIDGE
+   WAVE BRIDGE
    ════════════════════════════════════════════════════ */
 .heroWaveBridge {
   position: relative;
-  background: #F8FAFC;   /* same as hero bg */
+  background: #F8FAFC;
   margin-top: -2px;
-  text-align: center;
-  height: 80px; /* Fixed height matching the SVG aspect ratio */
+  height: 80px;
   overflow: hidden;
 }
 
@@ -622,48 +658,21 @@
   height: 100%;
 }
 
-.bridgeScrollHint {
-  position: absolute;
-  bottom: 8px; /* Positioned inside the white curved filled path */
-  left: 50%;
-  transform: translateX(-50%);
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-brand);
-  z-index: 3;
-}
-
-.bridgeScrollHint i {
-  font-size: 0.85rem;
-  animation: bounceDown 1.6s ease-in-out infinite;
-}
-
-@keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(5px); }
-}
-
 /* ════════════════════════════════════════════════════
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE
    ════════════════════════════════════════════════════ */
 
 /* ── Tablet (≤ 1024px) ── */
 @media (max-width: 1024px) {
   .heroSlidesContainer {
-    min-height: 500px; /* Sensible min-height for tablet, but allows growth */
+    min-height: 520px;
   }
 
   .heroSlideInner {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
-    padding: 40px 20px 30px;
+    padding: 40px 20px 40px;
   }
 
   .heroTextCol {
@@ -673,7 +682,7 @@
 
   .heroDesc {
     margin: 0 auto 32px;
-    max-width: 600px;
+    max-width: 560px;
   }
 
   .heroCtaRow {
@@ -691,28 +700,27 @@
   }
 
   .heroVisualWrap {
-    max-width: 420px;
+    height: 380px;
+    max-width: 440px;
   }
 
-  .stackPill3 {
-    display: none;
-  }
+  .mainImgCard { width: 270px; height: 200px; }
+  .secondaryImgCard { width: 195px; height: 140px; }
+  .techPill2 { right: -8px; }
+  .techPill3 { display: none; }
 }
 
 /* ── Mobile (≤ 640px) ── */
 @media (max-width: 640px) {
   .heroSlidesContainer {
     min-height: auto;
-    position: relative;
-    padding-bottom: 56px; /* room for dots */
+    padding-bottom: 56px;
   }
-
-
 
   .heroSlideInner {
     grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 28px 16px 24px;
+    gap: 24px;
+    padding: 28px 16px 20px;
   }
 
   .heroH1 {
@@ -725,11 +733,11 @@
   }
 
   .heroImgCol {
-    display: none; /* hide visual column on smallest screens */
+    display: none;
   }
 
   .heroArrow {
-    display: none; /* arrows hidden on mobile, use dots instead */
+    display: none;
   }
 
   .heroDots {
@@ -740,15 +748,17 @@
   }
 
   .heroStatsRow {
-    gap: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .heroStatDivider {
+    display: none;
   }
 
   .heroStatNum {
     font-size: 1.5rem;
-  }
-
-  .stackPill {
-    display: none;
   }
 
   .trustBar {
@@ -756,6 +766,6 @@
   }
 
   .heroWaveBridge {
-    display: none; /* cleaner on mobile */
+    display: none;
   }
 }

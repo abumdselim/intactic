@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { heroSlides, trustLogos } from '../../data/contentData';
 import styles from './HeroSection.module.css';
 
-// Duplicate trust logos for seamless marquee loop
 const marqueeLogos = [...trustLogos, ...trustLogos];
 
 export default function HeroSection() {
@@ -30,11 +29,9 @@ export default function HeroSection() {
   return (
     <>
       <section className={styles.heroSection} id="hero" aria-label="Hero">
-        {/* Background ambient glows */}
         <div className={styles.heroBgGlow1} aria-hidden="true" />
         <div className={styles.heroBgGlow2} aria-hidden="true" />
 
-        {/* Slides Container */}
         <div className={styles.heroSlidesContainer}>
           {heroSlides.map((slide, idx) => (
             <div
@@ -43,9 +40,10 @@ export default function HeroSection() {
               aria-hidden={currentSlide !== idx}
             >
               <div className={styles.heroSlideInner}>
-                {/* ── Left: Text Column ── */}
+
+                {/* ── LEFT: Text Column ── */}
                 <div className={styles.heroTextCol}>
-                  <span className={styles.heroBadge}>
+                  <span className={styles.heroBadge} style={{ borderColor: slide.accent + '44', color: slide.accent, background: slide.accent + '12' }}>
                     <i className={slide.badge.icon} aria-hidden="true" />
                     {slide.badge.text}
                   </span>
@@ -71,113 +69,113 @@ export default function HeroSection() {
                     </a>
                   </div>
 
-                  {/* Slide stats row */}
                   <div className={styles.heroStatsRow}>
                     {slide.stats.map((stat, si) => (
                       <div key={si} className={styles.heroStatItem}>
-                        <span className={styles.heroStatNum}>{stat.num}</span>
+                        <span className={styles.heroStatNum} style={{ color: si === 0 ? slide.accent : undefined }}>{stat.num}</span>
                         <span className={styles.heroStatLbl}>{stat.label}</span>
                       </div>
                     ))}
+                    <div className={styles.heroStatDivider} />
+                    <div className={styles.heroStatItem}>
+                      <span className={styles.heroStatNum}>12+</span>
+                      <span className={styles.heroStatLbl}>Years Active</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* ── Right: Visual Column ── */}
+                {/* ── RIGHT: Visual Column ── */}
                 <div className={styles.heroImgCol} aria-hidden="true">
                   <div className={styles.heroVisualWrap}>
 
-                    {/* Main dashboard card */}
-                    <div className={styles.visualCard}>
-                      {/* Top browser bar */}
-                      <div className={styles.vcBrowserBar}>
-                        <div className={styles.vcDots}>
-                          <span className={styles.vcDot} style={{ background: '#FF5F57' }} />
-                          <span className={styles.vcDot} style={{ background: '#FFBD2E' }} />
-                          <span className={styles.vcDot} style={{ background: '#28CA41' }} />
-                        </div>
-                        <div className={styles.vcUrlBar}>intactic.com/dashboard</div>
-                      </div>
+                    {/* Decorative grid lines bg */}
+                    <div className={styles.gridBg} />
 
-                      {/* Dashboard body */}
-                      <div className={styles.vcBody}>
-                        {/* Metrics row */}
-                        <div className={styles.vcMetricsRow}>
-                          {slide.stats.map((s, i) => (
-                            <div key={i} className={styles.vcMetric}>
-                              <span className={styles.vcMetricNum}>{s.num}</span>
-                              <span className={styles.vcMetricLbl}>{s.label}</span>
-                            </div>
-                          ))}
-                          <div className={styles.vcMetric}>
-                            <span className={styles.vcMetricNum}>12+</span>
-                            <span className={styles.vcMetricLbl}>Yrs Experience</span>
-                          </div>
-                        </div>
+                    {/* Main large image card */}
+                    <div className={styles.mainImgCard} style={{ '--slide-accent': slide.accent }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={slide.img1}
+                        alt=""
+                        className={styles.mainImg}
+                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                      />
+                      {/* Gradient scrim at bottom */}
+                      <div className={styles.mainImgScrim} style={{ background: `linear-gradient(to top, ${slide.accent}CC 0%, transparent 60%)` }} />
 
-                        {/* Animated bar chart */}
-                        <div className={styles.vcChart}>
-                          {[65, 80, 55, 90, 70, 95, 60].map((h, i) => (
-                            <div key={i} className={styles.vcBar} style={{ '--bar-h': h + '%', '--bar-delay': (i * 0.08) + 's' }} />
-                          ))}
-                        </div>
-
-                        {/* Activity feed */}
-                        <div className={styles.vcFeed}>
-                          <div className={`${styles.vcFeedItem} ${styles.vcFeedItemBlue}`}>
-                            <i className="fa-solid fa-circle-check" />
-                            <span>Product shipped — on schedule</span>
-                          </div>
-                          <div className={`${styles.vcFeedItem} ${styles.vcFeedItemGreen}`}>
-                            <i className="fa-solid fa-bolt" />
-                            <span>Build pipeline successful</span>
-                          </div>
-                          <div className={`${styles.vcFeedItem} ${styles.vcFeedItemAmber}`}>
-                            <i className="fa-solid fa-users" />
-                            <span>New client onboarded</span>
-                          </div>
-                        </div>
+                      {/* Stat pill on image — top left */}
+                      <div className={styles.imgBadgePill}>
+                        <i className="fa-solid fa-circle-check" style={{ color: '#22C55E' }} />
+                        <span>Live & Deployed</span>
                       </div>
                     </div>
 
-                    {/* Floating stack pills */}
-                    <div className={`${styles.stackPill} ${styles.stackPill1}`}>
-                      <i className="fa-brands fa-react" />
+                    {/* Secondary image — bottom right, smaller */}
+                    <div className={styles.secondaryImgCard}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={slide.img2}
+                        alt=""
+                        className={styles.secondaryImg}
+                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                      />
+                      <div className={styles.secondaryImgOverlay} style={{ background: `linear-gradient(135deg, ${slide.accent}44 0%, transparent 70%)` }} />
+                    </div>
+
+                    {/* Glassmorphic stat card — top right */}
+                    <div className={styles.glassStatCard}>
+                      <div className={styles.glassStatIcon} style={{ background: slide.accent + '18', color: slide.accent }}>
+                        <i className="fa-solid fa-chart-line" />
+                      </div>
+                      <span className={styles.glassStatNum} style={{ color: slide.accent }}>{slide.stats[0].num}</span>
+                      <span className={styles.glassStatLbl}>{slide.stats[0].label}</span>
+                    </div>
+
+                    {/* Dark metric card — bottom left */}
+                    <div className={styles.darkMetricCard}>
+                      <div className={styles.darkMetricTop}>
+                        <i className="fa-solid fa-star" style={{ color: '#FBAF32', fontSize: '0.8rem' }} />
+                        <i className="fa-solid fa-star" style={{ color: '#FBAF32', fontSize: '0.8rem' }} />
+                        <i className="fa-solid fa-star" style={{ color: '#FBAF32', fontSize: '0.8rem' }} />
+                        <i className="fa-solid fa-star" style={{ color: '#FBAF32', fontSize: '0.8rem' }} />
+                        <i className="fa-solid fa-star" style={{ color: '#FBAF32', fontSize: '0.8rem' }} />
+                      </div>
+                      <span className={styles.darkMetricNum}>{slide.stats[1].num}</span>
+                      <span className={styles.darkMetricLbl}>{slide.stats[1].label}</span>
+                    </div>
+
+                    {/* Floating tech stack dot pills */}
+                    <div className={`${styles.techPill} ${styles.techPill1}`}>
+                      <i className="fa-brands fa-react" style={{ color: '#61DAFB' }} />
                       <span>React</span>
                     </div>
-                    <div className={`${styles.stackPill} ${styles.stackPill2}`}>
-                      <i className="fa-brands fa-node-js" />
+                    <div className={`${styles.techPill} ${styles.techPill2}`}>
+                      <i className="fa-brands fa-node-js" style={{ color: '#68A063' }} />
                       <span>Node.js</span>
                     </div>
-                    <div className={`${styles.stackPill} ${styles.stackPill3}`}>
-                      <i className="fa-brands fa-python" />
-                      <span>Python / AI</span>
+                    <div className={`${styles.techPill} ${styles.techPill3}`}>
+                      <i className="fa-brands fa-python" style={{ color: '#3776AB' }} />
+                      <span>AI / ML</span>
                     </div>
 
-                    {/* Pulse ring */}
-                    <div className={styles.pulseRing} aria-hidden="true" />
+                    {/* Animated accent ring */}
+                    <div className={styles.accentRing} style={{ borderColor: slide.accent + '22' }} />
                   </div>
                 </div>
+
               </div>
             </div>
           ))}
 
-          {/* Prev / Next Arrows */}
-          <button
-            className={`${styles.heroArrow} ${styles.heroArrowLeft}`}
-            onClick={handlePrevSlide}
-            aria-label="Previous slide"
-          >
+          {/* Arrows */}
+          <button className={`${styles.heroArrow} ${styles.heroArrowLeft}`} onClick={handlePrevSlide} aria-label="Previous slide">
             <i className="fa-solid fa-chevron-left" aria-hidden="true" />
           </button>
-          <button
-            className={`${styles.heroArrow} ${styles.heroArrowRight}`}
-            onClick={handleNextSlide}
-            aria-label="Next slide"
-          >
+          <button className={`${styles.heroArrow} ${styles.heroArrowRight}`} onClick={handleNextSlide} aria-label="Next slide">
             <i className="fa-solid fa-chevron-right" aria-hidden="true" />
           </button>
 
-          {/* Slide indicator dots */}
+          {/* Dots */}
           <div className={styles.heroDots} role="tablist" aria-label="Slide indicators">
             {heroSlides.map((_, idx) => (
               <button
@@ -192,7 +190,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* ── Trust / Client Logo Bar ── */}
+        {/* ── Trust Bar ── */}
         <div className={styles.trustBar} aria-label="Trusted by">
           <p className={styles.trustBarLabel}>Trusted by teams building products at</p>
           <div className={styles.marqueeContainer} aria-hidden="true">
@@ -208,7 +206,7 @@ export default function HeroSection() {
         </div>
       </section>
 
-      {/* ── Hero → Capabilities wave bridge ── */}
+      {/* Wave bridge */}
       <div className={styles.heroWaveBridge} aria-hidden="true">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />

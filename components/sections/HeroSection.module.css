@@ -9,6 +9,7 @@
   flex-direction: column;
   background-color: #F8FAFC;
   padding-top: var(--header-height-normal);
+  overflow: hidden;
 }
 
 /* ── Ambient background glow orbs ── */
